@@ -107,8 +107,8 @@ To run and preview this project on your local machine:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/MdNayem-Dev/fresh-pack-bd.git
-   cd fresh-pack-bd
+   git clone https://github.com/MdNayem-Dev/freshpack-landing-page.git
+   cd freshpack-landing-page
    ```
 
 2. **Start a local development server:**
