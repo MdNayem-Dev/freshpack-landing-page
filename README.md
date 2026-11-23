@@ -1,8 +1,9 @@
 # 🌿 FreshPack BD — High-Converting E-Commerce Landing Page & Order Automation
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live%20Preview-059669?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
-[![Client Project](https://img.shields.io/badge/Project-Client%20Production-f59e0b?style=for-the-badge&logo=checkmarx&logoColor=white)](#)
-[![Tech Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20TailwindCSS%20%7C%20Vanilla%20JS-064e3b?style=for-the-badge)](#)
+[![Live Demo](https://img.shields.io/badge/Live%20Website-freshpackbd.blogspot.com-059669?style=for-the-badge&logo=googlechrome&logoColor=white)](https://freshpackbd.blogspot.com/)
+[![Client Project](https://img.shields.io/badge/Project-Client%20Production-f59e0b?style=for-the-badge&logo=checkmarx&logoColor=white)](https://freshpackbd.blogspot.com/)
+[![Hosting Cost](https://img.shields.io/badge/Hosting%20Cost-%240%20(Zero%20Overhead)-blue?style=for-the-badge)](#)
+[![Tech Stack](https://img.shields.io/badge/Stack-HTML5%20%7C%20TailwindCSS%20%7C%20Cloudflare-064e3b?style=for-the-badge)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
 ---
@@ -11,18 +12,21 @@
 
 **FreshPack BD** is an e-commerce direct-to-consumer (D2C) brand based in Dhaka, Bangladesh, offering food-grade Aluminum Foil Storage Bags for household and commercial food preservation. 
 
-The client approached me to design and develop a **high-converting, lightning-fast, mobile-first landing page** to run profitable Facebook Ads campaigns. The main goal was to deliver maximum conversion rates with an intuitive checkout experience tailored specifically for Bangladeshi consumers (Cash on Delivery + bKash/Nagad Mobile Financial Services).
+- **🔗 Live Production Website:** [https://freshpackbd.blogspot.com/](https://freshpackbd.blogspot.com/)
+- **👤 Role:** Frontend Web Developer & UI/UX Designer
+- **🎯 Core Challenge:** Build a high-converting, lightning-fast landing page on a **zero-recurring-cost budget** for a small business client starting their Facebook Ads campaign.
 
-> **💡 Milestone Project:** This was my first full-scale freelance client project where I handled everything from UI/UX strategy and copywriting integration to responsive frontend engineering and serverless checkout automation.
+> **💡 Milestone Project:** This was my first full-scale freelance client project where I handled everything from UI/UX strategy and copywriting integration to zero-cost hosting deployment and serverless checkout automation.
 
 ---
 
 ## 🎯 The Business Challenge & Client Requirements
 
-1. **Slow Speed Kills Conversions:** The client previously had issues with heavy CMS/WordPress setups that took 5–8 seconds to load on local 3G/4G mobile networks, leading to a high ad bounce rate.
-2. **Local Consumer Trust:** Online shoppers in Bangladesh demand strong social proof, authentic native Bengali typography, and clear trust badges (Cash on Delivery, 64-district delivery, easy returns).
-3. **Frictionless Checkout:** Traditional multi-step e-commerce checkouts cause cart abandonment. The client requested a seamless, 1-step modal checkout that automatically recalculates tiered package discounts and delivery fees.
-4. **Automated Order Pipeline:** The client needed real-time order sync to Google Sheets/Forms as a backup, instant Telegram notifications for the fulfillment team, and fraud screening (BDCourier) via a serverless Cloudflare Worker API.
+1. **Zero Recurring Infrastructure Costs:** The client was launching a new D2C product and specifically requested **$0 monthly hosting & domain maintenance expenses** to keep initial operational overhead minimal.
+2. **Speed & Reliability:** Despite using free hosting, the site could not be slow. It needed sub-second loading times on local 3G/4G mobile networks to keep ad bounce rates as low as possible.
+3. **Local Consumer Trust:** Online shoppers in Bangladesh demand strong social proof, authentic native Bengali typography, and clear trust badges (Cash on Delivery, 64-district delivery, easy returns).
+4. **Frictionless Checkout:** Traditional multi-step checkouts cause high cart abandonment. The client needed a streamlined, 1-step modal checkout with automatic tiered pricing and delivery rate calculations.
+5. **Automated Order Pipeline:** Real-time order sync to Google Sheets, instant Telegram alerts for the delivery team, and automated courier integration (Steadfast) via a serverless Cloudflare Worker API.
 
 ---
 
@@ -72,7 +76,11 @@ The client approached me to design and develop a **high-converting, lightning-fa
 - **Conditional Payment Logic:** Switching to bKash/Nagad dynamically reveals Send Money instructions and validates the required Transaction ID before submission.
 - **Phone Number Normalization:** Automatically converts Bengali numeral inputs (`০১৭১...`) to standard English numerals with 11-digit regex validation.
 
-### 4. Dual Serverless Order Dispatch
+### 4. Zero-Cost Smart Hosting Architecture
+- **Headless Static on Blogger:** Cleverly engineered the entire modern responsive landing page into a custom clean theme structure on **Google Blogger**. This gave the client **100% free hosting**, Google's ultra-reliable global CDN, free SSL, and zero monthly server upkeep costs.
+- **Serverless Integration:** Even though hosted on a free static host, the site functions like a modern web application by connecting to a **Cloudflare Worker** serverless API for dynamic backend automation.
+
+### 5. Dual Serverless Order Dispatch
 - Dispatches form data concurrently via `Promise.allSettled` to:
   1. **Google Forms Endpoint** (`no-cors` mode for zero CORS failures) for automated spreadsheet logging.
   2. **Cloudflare Worker Serverless Backend** (`/order` POST) for fraud verification, automated delivery dispatch (Steadfast Courier API), and Telegram Bot instant push notifications.
@@ -85,6 +93,7 @@ The client approached me to design and develop a **high-converting, lightning-fa
 |---|---|
 | **Frontend** | HTML5, Tailwind CSS, JavaScript (ES6+), FontAwesome 6 |
 | **Typography** | Google Fonts (`Hind Siliguri`) |
+| **Hosting & CDN** | Google Blogger ($0 / Zero-Cost Hosting & Global CDN with SSL) |
 | **Tracking & Ads** | Meta Pixel (Facebook Ads conversion tracking) |
 | **Serverless Backend** | Cloudflare Workers (Node/V8 runtime at the edge) |
 | **APIs & Integrations** | SteadFast Courier API, BDCourier Fraud API, Telegram Bot API, Google Forms |
